@@ -1,0 +1,297 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+
+    scroll-behavior: smooth;
+}
+
+img {
+    width: 100%;
+}
+
+h2 {
+    color: #16423C;
+}
+
+body {    
+    margin: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    background-color: #E9EFEC;
+}
+
+header {
+    padding: 16px 32px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    position: fixed;
+    width: 100%;
+
+    background-color: #16423C;
+    z-index: 9999;
+}
+
+header h1 {
+    align-self: center;
+    color: white;
+}
+
+nav {
+    display: flex;
+    padding-block: 1rem;
+}
+
+nav ul {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    gap: 1rem;
+
+    list-style-type: none;
+}
+
+a {
+    padding: 1rem;
+
+    color: white;
+    font-weight: 500;
+    font-size: 24px;
+    text-decoration: none;
+
+    border-radius: 20px;
+}
+
+a:hover {
+    background-color: #C4DAD2;
+    color: #16423C;
+    transition: all 0.2s ease-in-out;
+}
+
+#about {
+    padding-top: 100px;
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#about .description,.profile-picture {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    text-align: center;
+    padding: 32px;
+}
+
+.profile-picture img {
+    border-radius: 100%;
+    width: 50%;
+}
+
+#projects {
+    padding: 64px 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.projects-container {
+    margin: 16px 0;
+    display: flex;
+    flex-direction: row;
+
+    gap: 12px;
+}
+
+.projects-container img {
+    width: 70%;
+}
+
+.projects-container section {
+    padding: 24px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    background-color: #6A9C89;
+    color: white;
+
+    box-shadow: 0px 6px 10px #888888;
+}
+
+.projects-container section:hover {
+    transform: scale(1.1);
+    transition: all 0.1s cubic-bezier(0.47, 0, 0.745, 0.715);
+}
+
+.popup {
+    background-color: #16423C;
+    color: #C4DAD2;
+    padding: 64px;
+    border-radius: 12px;
+
+    display: none;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+
+    position: fixed;
+    top: 30%;
+    bottom: 30%;
+
+    height: 40%;
+    z-index: 9;
+}
+
+button {
+    width: 30%;
+    height: 20%;
+    text-decoration: none;
+
+    background-color: #16423C;
+    border-radius: 12px;
+    color: white;
+}
+
+button:hover {
+    transform: scale(1.1);
+    transition: all 0.1s ease-in-out;
+}
+
+#certificate-education {
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.cert-edu-container {
+    margin: 16px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.certificates, .education {
+    background-color: #6A9C89;
+    box-shadow: 0px 6px 10px #888888;
+    color: white;
+    h2 {
+        color: white;
+    }
+}
+
+.certificates {
+    padding: 12px 24px;
+    display: flex;
+    flex-direction: column;
+    width: 49%;
+}
+
+.education {
+    padding: 12px 24px;
+    display: flex;
+    flex-direction: column;
+    text-align: end;
+    width: 49%;
+}
+
+footer {
+    padding: 16px 32px;
+    display: flex;
+    justify-content: space-between;
+    background-color: #16423C;
+    color: #C4DAD2;
+}
+
+footer aside {
+    display: flex;
+    flex-direction: column;
+    text-align: end;
+}
+
+@media screen and (max-width: 1000px) {
+    header {
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    nav, ul {
+        padding: 0;
+    }
+
+    header h1 {
+        font-size: 32px;
+    }
+
+    header ul {
+        justify-content: space-evenly;
+    }
+
+    header a {
+        padding: 1vw;
+        font-size: 2.7vw;
+    }
+
+    #about {
+        flex-direction: column-reverse;
+    }
+
+    .projects-container {
+        flex-direction: column;
+    }
+
+    #certificate-education {
+        text-align: center;
+    }
+
+    .cert-edu-container {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .certificates, .education {
+        text-align: center;
+        width: 100%;
+    }
+
+    .certificates ol {
+        align-items: center;
+        list-style-type: none;
+        transform: translateX(-3.7vw);
+    }
+
+    footer {
+        font-size: small;
+    }
+
+    footer div, aside {
+        flex-direction: column;
+    }
+
+    footer aside div {
+        height: 100%;
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    footer a {
+        padding: 4px;
+        font-size: 4vw;
+    }
+}
